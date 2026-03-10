@@ -706,35 +706,52 @@
             Dashboard
         </a>
 
-        <div class="nav-section-label mt-1">Query Builder</div>
+        {{-- ── KAMAR ── --}}
+        <div class="nav-section-label mt-1">Kamar</div>
         <a href="{{ route('kamar.index') }}"
-           class="nav-item-link {{ request()->routeIs('kamar.*') ? 'active active-blue' : '' }}">
+           class="nav-item-link {{ request()->routeIs('kamar.index','kamar.create','kamar.show','kamar.edit','kamar.laporan') ? 'active active-blue' : '' }}">
             <span class="nav-icon"><i class="bi bi-door-open-fill"></i></span>
             Kamar
+            <span class="nav-badge badge-qb">QB</span>
         </a>
-        <a href="{{ route('kamar.laporan') }}"
-           class="nav-item-link {{ request()->routeIs('kamar.laporan') ? 'active active-blue' : '' }}">
-            <span class="nav-icon"><i class="bi bi-bar-chart-fill"></i></span>
-            Laporan Kamar
+        <a href="{{ route('kamar-el.index') }}"
+           class="nav-item-link {{ request()->routeIs('kamar-el.*') ? 'active active-green' : '' }}">
+            <span class="nav-icon"><i class="bi bi-door-closed-fill"></i></span>
+            Kamar
+            <span class="nav-badge badge-el">EL</span>
         </a>
 
-        <div class="nav-section-label mt-1">Eloquent ORM</div>
+        {{-- ── KARYAWAN ── --}}
+        <div class="nav-section-label mt-1">Karyawan</div>
         <a href="{{ route('karyawan.index') }}"
-           class="nav-item-link {{ request()->routeIs('karyawan.*') ? 'active active-green' : '' }}">
+           class="nav-item-link {{ request()->routeIs('karyawan.index','karyawan.create','karyawan.show','karyawan.edit') ? 'active active-green' : '' }}">
             <span class="nav-icon"><i class="bi bi-person-badge-fill"></i></span>
             Karyawan
+            <span class="nav-badge badge-el">EL</span>
         </a>
-        <a href="{{ route('penyewa.index') }}"
-           class="nav-item-link {{ request()->routeIs('penyewa.*') ? 'active active-amber' : '' }}">
-            <span class="nav-icon"><i class="bi bi-people-fill"></i></span>
-            Penyewa
-        </a>
-        <a href="{{ route('penyewa.laporan') }}"
-           class="nav-item-link {{ request()->routeIs('penyewa.laporan') ? 'active active-amber' : '' }}">
-            <span class="nav-icon"><i class="bi bi-cash-coin"></i></span>
-            Lap. Pendapatan
+        <a href="{{ route('karyawan-qb.index') }}"
+           class="nav-item-link {{ request()->routeIs('karyawan-qb.*') ? 'active active-blue' : '' }}">
+            <span class="nav-icon"><i class="bi bi-person-vcard"></i></span>
+            Karyawan
+            <span class="nav-badge badge-qb">QB</span>
         </a>
 
+        {{-- ── PENYEWA ── --}}
+        <div class="nav-section-label mt-1">Penyewa</div>
+        <a href="{{ route('penyewa.index') }}"
+           class="nav-item-link {{ request()->routeIs('penyewa.index','penyewa.create','penyewa.show','penyewa.edit','penyewa.laporan') ? 'active active-amber' : '' }}">
+            <span class="nav-icon"><i class="bi bi-people-fill"></i></span>
+            Penyewa
+            <span class="nav-badge badge-el">EL</span>
+        </a>
+        <a href="{{ route('penyewa-qb.index') }}"
+           class="nav-item-link {{ request()->routeIs('penyewa-qb.*') ? 'active active-blue' : '' }}">
+            <span class="nav-icon"><i class="bi bi-person-lines-fill"></i></span>
+            Penyewa
+            <span class="nav-badge badge-qb">QB</span>
+        </a>
+
+        {{-- ── SISTEM ── --}}
         <div class="nav-section-label mt-1">Sistem</div>
         <a href="{{ route('setting.index') }}"
            class="nav-item-link {{ request()->routeIs('setting.*') ? 'active' : '' }}">

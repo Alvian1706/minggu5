@@ -1,4 +1,3 @@
-{{-- resources/views/penyewa/create.blade.php --}}
 @extends('layouts.app')
 
 @section('title', 'Daftar Penyewa Baru')

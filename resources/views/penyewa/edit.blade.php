@@ -1,4 +1,3 @@
-{{-- resources/views/penyewa/edit.blade.php --}}
 @extends('layouts.app')
 
 @section('title', 'Edit Penyewa')
